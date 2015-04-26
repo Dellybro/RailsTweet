@@ -13,7 +13,9 @@ gem 'bootstrap-will_paginate', 	'0.0.10'
 
 group :production do
 	gem 'rails_12factor',			'0.0.3'
+	gem 'pg', '~> 0.18.1'
 end
+
 
 #thisis for uploading images
 gem 'carrierwave', 			'0.10.0'
