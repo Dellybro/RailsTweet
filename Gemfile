@@ -10,8 +10,11 @@ gem 'faker',					'1.4.2'
 gem 'will_paginate',			'3.0.7'
 gem 'bootstrap-will_paginate', 	'0.0.10'
 
-gem 'ruby',						'2.0.0'
-gem 'rails_12factor',			'0.0.3'
+
+group :production do
+	gem 'rails_12factor',			'0.0.3'
+	gem 'pg',						'0.18.1'
+end
 
 #thisis for uploading images
 gem 'carrierwave', 			'0.10.0'
