@@ -2,13 +2,41 @@ Rails.application.routes.draw do
 
 
 
-  match ':controller(/:action(/:id))', :via => [:get, :post]
+
+
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  #match ':controller(/:action(/:id))', :via => [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home_page#index'
+  root 'static_pages#home'
+  get 'signup' => 'users#new'
+  get 'help'    => 'static_pages#help'
+  get 'about'   => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  get 'signup'  => 'users#new'
+  get 'edit_user' => 'users#edit'
+
+  resources :sessions
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :microposts,        only: [:create, :destroy]
+  resources :relationships,     only: [:create, :destroy]
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

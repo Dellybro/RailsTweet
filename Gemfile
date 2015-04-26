@@ -2,7 +2,18 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', 					'4.2.1'
+gem 'puma',  					'2.11.1'
+gem 'bcrypt', 					'3.1.10'
+gem 'bootstrap-sass',			'3.3.4.1'
+gem 'faker',					'1.4.2'
+gem 'will_paginate',			'3.0.7'
+gem 'bootstrap-will_paginate', 	'0.0.10'
+
+#thisis for uploading images
+gem 'carrierwave', 			'0.10.0'
+gem 'mini_magick',			'3.8.0'
+gem 'fog',					'1.23.0'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
