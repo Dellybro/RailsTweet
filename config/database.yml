@@ -44,8 +44,9 @@ test:
 #
 # You can use this database configuration with:
 #
- production:
-    url: <%= ENV['DATABASE_URL'] %>
+production:
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
 #
 # production:
 #   <<: *default
