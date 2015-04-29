@@ -1,20 +1,27 @@
 <% if logged_in? %>
 	<div class ="row">
-		<aside class="col-md-4">
-			<section class = "user_info">
-				<%= render 'shared/user_info' %>
-			</section>
-			<section class"stats">
-				<%= render 'shared/stats' %>
-			</section>
+		<aside class = "col-md-8">
 			<section class = "micropost_form">
 				<%= render 'shared/micropost_form' %>
 			</section>
-		</aside>
-		<div class='col-md-8'>
 			<h3>MicroPost Feed</h3>
 			<%= render 'shared/feed' %>
-		</div>
+		</aside>
+		<aside class="col-md-4">
+
+			<a href= "sessions/github" >
+			<img src="http://www.naveydesign.com/communities/6/004/012/491/796//images/4606534628.jpg" width="400" height="400"><br></br>Welcome to a Delly Marked product! Hopefully soon this area will be filled with advertisements!</img>
+			</a>
+
+			<a href ="sessions/ads">
+			<img src="http://www.presidiacreative.com/wp-content/uploads/2010/04/Kayaking.jpg" width="300" height="300"><br></br>KayaKing, feel afloat</img>
+			</a>
+
+			<a href ="sessions/ads">
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcShw1S1J9N0zoMlxnONNrT5-ug8m_21jWqqiULiBjemQ-r7IFWU"><br></br>EAT CHICKEN!!!! COWS MUST BE SAVED!!!</img>
+			</a>
+
+		</aside>
 	</div>
 
 
@@ -31,8 +38,8 @@
 	  	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 	</div>
 
-	<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+	
+	<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTPj_8-drib_63bGiLK0SdVw2OAmFdVHVFmKMbmZr0J9IAvayocngzqHww" width = 100 height = 75><br></br>DellyTag</img>
 
 
 <% end %>

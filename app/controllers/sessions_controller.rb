@@ -1,4 +1,12 @@
 class SessionsController < ApplicationController
+
+  def ads
+    redirect_to("http://www.milliondollarhomepage.com/")
+  end
+  def github
+    redirect_to("http://www.github.com/dellybro")
+  end
+
   def new
   end
 

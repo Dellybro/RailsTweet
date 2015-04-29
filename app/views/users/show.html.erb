@@ -10,6 +10,12 @@
 		<section class="stats">
 			<%= render 'shared/stats' %>
 		</section>
+		<h4><br></br><br></br>
+			About me: <br></br>
+			<h5>
+				<%= @user.bio %>
+			</h5>
+		</h4>
 	</aside>
   	<div class="col-md-8">
 		<%= render 'follow_form' if logged_in? %>
