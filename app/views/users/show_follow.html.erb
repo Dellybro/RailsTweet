@@ -2,7 +2,7 @@
 <div class="row">
 	<aside class="col-md-4">
 		<section class="user_info">
-			<%= gravatar_for @user %>
+			<%= image_tag(@user.avatar.url(:medium)) %>
 			<h1> <%= @user.name %></h1>
 			<span><%= link_to "view my profile", @user %></span>
 			<span><b>Posts:</b> <%= @user.microposts.count %></span>
@@ -11,11 +11,11 @@
 			<%= render 'shared/stats' %>
 			<br></br><p>Users on this page:</p>
 			<% if @users.any? %>
-			<div class="user_avatars">
-				<% @users.each do |user| %>
-					<%= link_to gravatar_for(user, size: 30), user %>
-				<% end %>
-			</div>
+				<div class="user_avatars">
+					<% @users.each do |user| %>
+						<%= link_to image_tag(user.avatar.url(:thumb)), user %>
+					<% end %>
+				</div>
 			<% end %>
 		</section>
 	</aside>
