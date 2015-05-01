@@ -1,3 +1,59 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.InnerContainer{
+  width: 400px;
+  height: 350px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  left: 0%;
+  top: 0%;
+  margin-left: -200px;
+
+}
+
+
+.StreamsHero-image {
+	height:310px;
+	width: 1500px;
+}
+.StreamsHero-header {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+  padding: 15px 0 20px 0;
+  transition: font-size 300ms linear;
+}
+.StreamsHero-content {
+  padding-top: 100px;
+  position: relative;
+  text-align: center;
+  transition: padding 300ms linear;
+}
+.StreamsHero-blurb {
+	left:-25;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 200;
+  opacity: .5;
+  -ms-filter: "alpha(opacity=50)";
+  transition: opacity 300ms linear;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}

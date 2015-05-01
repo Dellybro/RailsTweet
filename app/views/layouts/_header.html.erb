@@ -1,7 +1,10 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "DellyTag", root_path, id: "logo" %>
-    <nav>
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header"><%= link_to "TwitterClone", root_path, id: "logo" %>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-menubuilder">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
@@ -19,6 +22,7 @@
                 <%= link_to "Log out", logout_path, method: "delete" %>
               </li>
             </ul>
+            <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
           </li>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
@@ -26,4 +30,5 @@
       </ul>
     </nav>
   </div>
-</header>
+</div>
+</div>

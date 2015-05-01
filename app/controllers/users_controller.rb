@@ -44,6 +44,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @micropost  = current_user.microposts.build
 
   end
 
@@ -87,7 +88,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :bio)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :bio, :avatar)
     end
     #This defines updating params and such
 

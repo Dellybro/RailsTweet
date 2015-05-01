@@ -28,18 +28,24 @@
 <%else%>
 
 
-	<div class="center jumbotron">
+	<%= render 'shared/background' %>
+
+	<div class="InnerContainer">
+		<div class="StreamsHero-image" style="background-image: url(https://abs.twimg.com/a/1430225370/img/t1/lohp_streams_header_bg_v3.png);"></div>
+		<div class="StreamHero-content">
+			<h2 class="StreamHero-header">See what's happening right now.</h2>
+			<p class="StreamHero-blurb">Find Community, conversation and inspiration about the things you live.</p>
+		</div>
+	</div>
+
+
   		<h1>Welcome to Twitter</h1>
 
 		<h2>
-    			This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    				sample application.
-  		</h2>
-	  	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-	</div>
+    			Welcome to Twitter Clone made by Travis Delly<br></br>
 
-	
-	<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTPj_8-drib_63bGiLK0SdVw2OAmFdVHVFmKMbmZr0J9IAvayocngzqHww" width = 100 height = 75><br></br>DellyTag</img>
+	  	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  		</h2>
 
 
 <% end %>

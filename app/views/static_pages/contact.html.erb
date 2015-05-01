@@ -1,0 +1,25 @@
+
+<%= render 'shared/background' %>
+<h1>Contact Us</h1>
+<div style="display: table; margin: 0 auto;">
+    <form>
+        <p><label for="name">Name</label></p>
+            <input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text">
+
+        <p><label for="email">Email</label></p>
+            <input id="email" name="email" placeholder="example@domain.com" required="" tabindex="2" type="text">
+
+        <p><label for="Subject">Subject</label></p>
+            <input id="subject" name="subject" placeholder="Subject" required="" tabindex="2" type="text">
+
+        <p><label for="comment">Your Message</label></p>
+            <textarea name="comment" id="comment" tabindex="4"></textarea> <br>
+        <input name="submit" id="submit" tabindex="5" value="Send Message" type="submit">
+    </form>
+</div>
+
+<br></br><br></br><br></br><br></br>
+
+<div style="float:left; padding-left:30px;padding-bottom:30px;">
+    <%= link_to "<< Home Page", root_path %>
+</div>
