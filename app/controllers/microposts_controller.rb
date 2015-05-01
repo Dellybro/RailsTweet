@@ -11,7 +11,7 @@ class MicropostsController < ApplicationController
 		else
 			@feed_items = []
 			render 'static_pages/home'
-			flash[:warning] = "Login?"
+			flash[:warning] = "Errrrrrrrrrrrrroorooorororor Said the computer. Try typing into the box."
 		end
 	end
 

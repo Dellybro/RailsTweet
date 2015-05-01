@@ -169,10 +169,10 @@ aside {
 		display: inline-block;
 		vertical-align: top;
 		height: 40px;
-		border-style:solid;
-		border-width:1px;
+		border-width:5px;	
+    	border-style:outset;
 		width:400px;
-		float:right;
+		float:left;
 		font-family: helvetica, bold;
 		font-size: 20px;
     	padding: 30px 30px 30px 30px;
@@ -185,7 +185,9 @@ aside {
 		text-align: center;
 		border-style:solid;
 		border-width:1px;
-		float:right;
+		border-width:5px;	
+    	border-style:inset;
+		float:left;
 		clear:right;
 		img {
 			display: block;
@@ -205,7 +207,7 @@ aside {
 	}
 	.timestamp {
 		color: #777;
-		display: block;
+		float: left;
 		margin-left: 60px;
 		margin-top: 10px;
 		margin-bottom: 10px;
