@@ -10,8 +10,12 @@ class User < ActiveRecord::Base
 
 
 
-  #Avatars
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :small => '50x50>' }, :default_url => "rails.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :small => '50x50>' }, :default_url => "rails.png", :provider => 'AWS',
+                    :s3_credentials => {
+                        :bucket  => "twitterclones-assets-users",
+                        :access_key_id => ENV["aws_secret_access_key"],
+                        :secret_access_key => ENV["aws_secert_key_id"]
+                    }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
