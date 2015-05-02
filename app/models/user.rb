@@ -15,11 +15,7 @@ class User < ActiveRecord::Base
                         :bucket  => "twitterclones-assets-users",
                         :access_key_id => ENV["aws_secert_key_id"],
                         :secret_access_key => ENV["aws_secret_access_key"]
-                    },
-                    :s3_permissions => "private",
-                    :url => ":s3_domain_url"
-                    Paperclip::Attachment.default_options[:url] = ":s3_domain_url"
-                    Paperclip::Attachment.default_options[:path] = "/:class/:attachment/:id_partition/:style/:filename"
+                    }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
