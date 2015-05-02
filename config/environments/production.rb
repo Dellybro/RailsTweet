@@ -27,15 +27,6 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
-  # config.paperclip_defaults = {
-  # :storage => :s3,
-  # :s3_credentials => {
-  #   :bucket => ENV['twitterclone-assets-users'],
-  #   :access_key_id => ENV['aws_access_key_id'],
-  #   :secret_access_key => ENV['aws_secret_access_key']
-  #   }
-  # } 
-
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like

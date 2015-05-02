@@ -40,11 +40,6 @@ GEM
     autoprefixer-rails (5.1.9)
       execjs
       json
-    aws-sdk (1.64.0)
-      aws-sdk-v1 (= 1.64.0)
-    aws-sdk-v1 (1.64.0)
-      json (~> 1.4)
-      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -79,6 +74,9 @@ GEM
     execjs (2.5.2)
     faker (1.4.2)
       i18n (~> 0.5)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     fog (1.23.0)
       fog-brightbox
       fog-core (~> 1.23)
@@ -215,7 +213,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 1.6)
   bcrypt (= 3.1.10)
   bootstrap-sass (= 3.3.4.1)
   bootstrap-will_paginate (= 0.0.10)
@@ -223,6 +220,7 @@ DEPENDENCIES
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   faker (= 1.4.2)
+  figaro (= 0.7)
   fog (= 1.23.0)
   jbuilder (~> 2.0)
   jquery-rails
