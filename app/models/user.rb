@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 
 
-
+  #Does this work
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :small => '50x50>' }, :default_url => "rails.png", :provider => 'AWS',
                     :s3_credentials => {
                         :bucket  => "twitterclones-assets-users",
