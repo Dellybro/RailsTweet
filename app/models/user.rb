@@ -12,10 +12,13 @@ class User < ActiveRecord::Base
                     :storage => :s3,
                     :bucket  => "twitterclones-assets-users",
                     :s3_credentials => {
-                        :bucket  => "twitterclones-assets-users",
+                        :bucket  => "twitterclone-assets-users",
                         :access_key_id => ENV["aws_secret_key_id"],
                         :secret_access_key => ENV["aws_secret_access_key"]
-                    }
+                    },
+                    :s3_permissions => "private",
+                    Paperclip::Attachment.default_options[:storage] = ":s3_domain_url"
+                    Paperclip::Attachment.default_options[:path] = "/:class/:attachment/:id_partition/:style/:filename"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
