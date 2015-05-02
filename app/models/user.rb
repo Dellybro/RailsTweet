@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
                         :secret_access_key => ENV["aws_secret_access_key"]
                     },
                     :s3_permissions => "private",
-                    Paperclip::Attachment.default_options[:storage] = ":s3_domain_url"
+                    Paperclip::Attachment.default_options[:url] = ":s3_domain_url"
                     Paperclip::Attachment.default_options[:path] = "/:class/:attachment/:id_partition/:style/:filename"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
