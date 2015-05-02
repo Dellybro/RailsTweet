@@ -10,7 +10,7 @@ gem 'faker',					'1.4.2'
 gem 'will_paginate',			'3.0.7'
 gem 'bootstrap-will_paginate', 	'0.0.10'
 gem 'paperclip',		'~> 4.1'
-
+gem 'aws-sdk', '~> 1.6'
 
 group :production do
 	gem 'rails_12factor',			'0.0.3'
