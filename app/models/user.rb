@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
                     :bucket  => "twitterclones-assets-users",
                     :s3_credentials => {
                         :bucket  => "twitterclones-assets-users",
-                        :access_key_id => ENV["aws_secert_key_id"],
+                        :access_key_id => ENV["aws_secret_key_id"],
                         :secret_access_key => ENV["aws_secret_access_key"]
                     }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
