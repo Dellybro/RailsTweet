@@ -8,14 +8,7 @@ class User < ActiveRecord::Base
   has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
 
   has_attached_file :avatar,
-                    :style => {:medium => "300x300>", :thumb => "100x100>", :small => '50x50>'},
-                    :storage => :s3,
-                    :bucket  => "twitterclones-assets-users",
-                    :s3_credentials => {
-                        :bucket  => "twitterclone-assets-users",
-                        :access_key_id => ENV["aws_secret_key_id"],
-                        :secret_access_key => ENV["aws_secret_access_key"]
-                    }
+                    :style => {:medium => "300x300>", :thumb => "100x100>", :small => '50x50>'}
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
