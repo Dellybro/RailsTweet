@@ -2,7 +2,7 @@
 <div class="row">
 	<aside class="col-md-4">
 		<section class="user_info">
-			<%= image_tag(@user.image.url %>
+			<%= image_tag(@user.image.url) %>
 			<h1> <%= @user.name %></h1>
 			<span><%= link_to "view my profile", @user %></span>
 			<span><b>Posts:</b> <%= @user.microposts.count %></span>
@@ -13,7 +13,7 @@
 			<% if @users.any? %>
 				<div class="user_avatars">
 					<% @users.each do |user| %>
-						<%= link_to image_tag(user.image.url, user %>
+						<%= link_to image_tag(user.image.url), user %>
 					<% end %>
 				</div>
 			<% end %>

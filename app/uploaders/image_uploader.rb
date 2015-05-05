@@ -14,6 +14,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :file
   end
 
+  def default_url
+    'rails.png'
+  end
+
 
   def extension_white_list
     %w(jpg jpeg gif png)
