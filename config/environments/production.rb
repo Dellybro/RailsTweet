@@ -27,7 +27,6 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
-  Aws.config[:region] = 'us-west-2'
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
