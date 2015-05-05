@@ -16,7 +16,7 @@ group :production do
 	gem 'pg', '~> 0.18.1'
 end
 
-gem 'aws-sdk',			'2.0.41'
+gem 'aws-sdk',			'< 2.0'
 gem 'figaro',			'0.7'
 
 #thisis for uploading images
