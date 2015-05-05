@@ -10,6 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -29,12 +30,13 @@ Rails.application.configure do
   }
   config.paperclip_defaults = {
     :storage => :s3,
-    :s3_host_name => 's3-us-west-2.amazonaws.com',
     :s3_credentials => {
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    },
-    :bucket => ENV['S3_BUCKET_NAME']
+      :region => 'us-west-2'
+      :bucket => ENV['S3_BUCKET_NAME']
+      :s3_host_name => 's3-us-west-2.amazonaws.com',
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
