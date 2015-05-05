@@ -1,6 +1,6 @@
 <li id="micropost-<%= micropost.id %>">
   <div class='imageView'>
-    <%= link_to image_tag(micropost.user.avatar.url(:thumb)), micropost.user %>
+    <%= link_to image_tag(micropost.user.image.url), micropost.user %>
   </div>
   <div class="nameView"><%= link_to micropost.user.name, micropost.user %></div>
   <div class="postView">
