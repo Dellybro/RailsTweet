@@ -7,15 +7,8 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
   has_attached_file :avatar,
-          :styles => { :medium => "300x300>", :thumb => "100x100>", :small => "50x50>" },
-          :default_url => "/assets/images/rails.png",
-          :store => :s3,
-          :s3_permissions => :private,
-          :s3_storage_class => :reduced_redundacy,
-          :s3_credentials => Proc.new{ |a| a.instance.s3_credentials }
-  def s3_credentials
-    {:url => ":s3_domain_url", :region => 'us-west-2', :s3_host_name => 's3-us-west-2.amazonaws.com/twitterclone-assets-users', :bucket =>'twitterclone-assets-users', :access_key_id=>'AKIAI3HYSXZDOT5TNUUA', :secret_access_key=>'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'}
-  end
+                :styles => { :medium => "300x300>", :thumb => "100x100>", :small => "50x50>" },
+                :default_url => "/assets/images/rails.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
