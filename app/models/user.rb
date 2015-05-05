@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   #Avatars are supser fuckign easy
 
+
+  mount_uploader :image, ImageUploader
 #Following Sections
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
