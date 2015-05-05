@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
           :s3_storage_class => :reduced_redundacy,
           :s3_credentials => Proc.new{ |a| a.instance.s3_credentials }
 
+  Paperclip::Attachment.default_options[:url] = 'twitterclone-assets-users.amazonaws.com'
+  Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
   def s3_credentials
     {:bucket=>'twitterclone-assets-users', :access_key_id=>'AKIAI3HYSXZDOT5TNUUA', :secret_access_key=>'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'}
   end
